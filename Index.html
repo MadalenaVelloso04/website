@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <link href="./styling.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Didact+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/aie2ati.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+        <!DOCTYPE html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Background Image</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Circle Cursor</title>
+    
+    </head>
+
+    <body>
+        
+        <div class="main">
+        <div id="navbar">
+                <a class="navbar-links" href="./Index.html">
+                    <img src="images/logo.png" alt="Logo" class="navbar-logo"> 
+            </a>
+
+            <div class="navbar-links"> 
+                <a class="navbar-links a" href="#about-me" id="about-me-content">About me</a>
+                <a class="navbar-links a" href="./projects.html">Projects</a>
+                <a class="navbar-links a" href="#contact-section">Contacts</a>
+            </div>
+        </div>
+        <div class="container">
+            <img src="images/brancoeu_1.png" alt="Interactive Drawing" class="interactive-drawing" id="interactiveDrawing">
+        </div>
+        
+        <div class="content">
+                <h1>
+                    <h1 id="changingText">MADALENA VELLOSO</h1>
+                </h1>
+        </div>
+        
+       
+    
+        <h3 class="descript">
+            "You can't use up<br> 
+            creativity.<br>
+            The more you use, <br>
+            the more you have." <br>
+            - Maya Angelou
+        </h3>
+    
+    
+        <a class="letstalk" href="mailto:madalenavelloso04@gmail.com">LETS TALK</a>
+
+   
+
+    <script>
+        const texts = ["HELLO", "HELLO HELLO", "HELLO HELLO HELLO"];
+        let count = 0;
+        const textElement = document.getElementById("changingText");
+    
+        setInterval(() => {
+            textElement.textContent = texts[count];
+            count = (count + 1) % texts.length;
+        }, 1000); // Changes text every 2 seconds
+    </script>
+    
+</div>
+
+
+    <section class="about-me" id="about-me">
+        <div class="about-me-content">
+           <div class="about-me-text">
+    
+        My name is Madalena Velloso, and I'm a young Portuguese student designer with a deep-rooted passion for fine arts. Growing up immersed in a world of culture and visual communication, with parents in the history of art field, I've always been surrounded by creativity and artistic expression.<br>
+    
+        In this portfolio, you'll find a glimpse into some of my projects over the years, ranging from branding to 3D animation, and much more. My work is a blend of traditional fine arts and modern design, allowing me to explore creative solutions with freedom and depth.<br>
+
+        The combination of my fine arts background with my design studies has pushed me to think beyond the conventional, always returning to the essentials—paper and pencil—as the foundation of my creative process. I believe that merging classical techniques with digital innovation leads to unique and impactful designs.
+
+        </div>
+    </div>
+    </section>
+
+
+      <!-- New Section Beneath About Me -->
+      <section class="new-section" id="new-section">
+        <div class="new-section-content">
+            <h2 class="section-title">My Skills</h2>
+            <div class="containerskills">
+                <div class="flex">
+                    <p>Illustrator</p>
+                    <div class="bar">
+                        <div class="inside1"></div>
+                    </div>
+                    <h3>90%</h3>
+                </div>
+                <div class="flex">
+                    <p>Photoshop</p>
+                    <div class="bar">
+                        <div class="inside2"></div>
+                    </div>
+                    <h3>80%</h3>
+                </div>
+                <div class="flex">
+                    <p>InDesign</p>
+                    <div class="bar">
+                        <div class="inside3"></div>
+                    </div>
+                    <h3>70%</h3>
+                </div>
+                <div class="flex">
+                    <p>Figma</p>
+                    <div class="bar">
+                        <div class="inside4"></div>
+                    </div>
+                    <h3>85%</h3>
+                </div>
+                <div class="flex">
+                    <p>Sketch</p>
+                    <div class="bar">
+                        <div class="inside5"></div>
+                    </div>
+                    <h3>75%</h3>
+                </div>
+                <div class="flex">
+                    <p>After Effects</p>
+                    <div class="bar">
+                        <div class="inside6"></div>
+                    </div>
+                    <h3>65%</h3>
+                </div>
+                <!-- New skills added here -->
+                <div class="flex">
+                    <p>Adobe XD</p>
+                    <div class="bar">
+                        <div class="inside7"></div>
+                    </div>
+                    <h3>85%</h3>
+                </div>
+                <div class="flex">
+                    <p>HTML/CSS</p>
+                    <div class="bar">
+                        <div class="inside8"></div>
+                    </div>
+                    <h3>75%</h3>
+                </div>
+                <div class="flex">
+                    <p>JavaScript</p>
+                    <div class="bar">
+                        <div class="inside9"></div>
+                    </div>
+                    <h3>65%</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="contact-section">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via the following methods:</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+1234567890">+1 234 567 890</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Your City, Country</p>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="images/linkedin.png" alt="Twitter" style="width: 3vw; height: auto;">
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                    <img src="images/instagram.png" alt="LinkedIn" style="width: 3vw; height: auto;">
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank">
+                    <img src="images/behance.png" alt="GitHub" style="width: 3vw; height: auto;">
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+    <!-- Circle cursor element -->
+    <div class="circle-cursor"></div>
+
+    <script src="script.js"></script>
+
+    <script src="imageofme.js"></script>
+    <script src="sliding.js"></script>
+    <script src="aptidoes.js"></script>
+
+
+    
+    
+    </body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+

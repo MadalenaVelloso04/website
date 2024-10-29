@@ -1,0 +1,548 @@
+/* Base styles for desktop and larger screens */
+body {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'impact';
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+    background-color: #D85A36;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: none;
+    text-decoration: none;
+    color: #FCF1D2;
+  }
+
+.main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  height: 100vh;
+  background-color: #D85A36;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  z-index: 2;
+}
+  
+  h2 {
+    font-family: 'impact';
+    text-decoration: none;
+  }
+  
+  p {
+    margin: 5px;
+  }
+  
+  .descript {
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    text-transform: uppercase;
+    font-family: 'impact';
+    font-size: 2vw;
+    color: #FCF1D2;
+    margin-bottom: 10px;
+  }
+
+
+  /* Smaller screens */
+@media (max-width: 768px) {
+  .descript {
+      font-size: 20px; /* Minimum size for tablets and smaller devices */
+  }
+}
+
+
+  
+  .letstalk {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    text-transform: uppercase;
+    font-family: 'impact';
+    font-size: 6vw;
+    color: #FCF1D2;
+    text-decoration: none; 
+    z-index: 10;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .letstalk {
+      font-size: 50px; /* Minimum size for tablets and smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .letstalk {
+      font-size: 28px; /* Minimum size for phones */
+  }
+}
+
+.letstalk:hover {
+    color: #1F1E19; 
+}
+
+.letstalk::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* Position it vertically centered */
+  left: -40px; /* Adjust this value to position the circle further left of the text */
+  transform: translateY(-50%) scale(0); /* Initially hidden with scale(0) */
+  width: 30px; /* Diameter of the small circle */
+  height: 30px;
+  background-color: #FCF1D2;
+  border-radius: 50%; /* Makes it a circle */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+  opacity: 0; /* Initially hidden */
+}
+
+/* On hover, make the circle appear */
+.letstalk:hover::after {
+  transform: translateY(-50%) scale(1); /* Scale up the circle */
+  opacity: 1; /* Make it visible */
+}
+
+
+  
+  h1 {
+    text-transform: uppercase;
+    font-family: "jackson-mn", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 100px;
+    text-align: center;
+    transition: color 0.5s ease-in-out;
+    color: #FCF1D2;;
+  }
+  
+  h1:hover {
+    color: #1F1E19; 
+  }
+  
+  #navbar {
+    margin-top: 0px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px;
+    border-bottom: 2px solid #FCF1D2;
+    height: 5vh;
+    text-decoration: none;
+    z-index: 10; /* Ensure it stays above other content */
+ max-width: 100%; /* Make the navbar full width */
+
+}
+.navbar-links  {
+    color: #FCF1D2;
+    font-size: 30px;
+    font-weight: lighter;
+    gap:30px;
+    text-decoration: none;
+    
+  }
+
+  .navbar-logo {
+  max-width: 50px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    max-width: 37px;
+  }
+}
+
+.navbar-links a {
+    font-size: 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    color:#FCF1D2;  
+    transition: color 0.3s ease;
+}
+  
+  
+  .navbar-links a:hover {
+    color: #1F1E19; 
+  }
+  
+
+/* Small circle appearing on hover */
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    top: 0%; /* Position at the center vertically */
+    left: 50%; /* Position at the center horizontally */
+    transform: translate(-50%, -50%) scale(0); /* Initially hidden with scale(0) */
+    width: 15px; /* Diameter of the small circle */
+    height: 15px;
+    background-color: #FCF1D2;
+    border-radius: 50%; /* Makes it a circle */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+    opacity: 0; /* Initially hidden */
+}
+
+/* On hover, make the circle appear */
+.navbar-links a:hover::after {
+    transform: translate(-50%, -50%) scale(1); /* Scale up the circle */
+    opacity: 1; /* Make it visible */
+}
+  
+  .content {
+    text-align: center;
+    color: #FCF1D2;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6; /* Ensure it stays above the container */
+  }
+  
+  .circle-cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fcf1d2c3;
+    pointer-events: none;
+    z-index: 10;
+    transition: transform 0.1s ease;
+  }
+
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative; /* Position it relative to the viewport */
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it vertically and horizontally */
+}
+
+  .interactive-drawing {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  
+  .about-me {
+    position: relative; /* Keeps the section positioned properly */
+    max-width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow */
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url('images/berlinme.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    z-index: -1; /* Ensure this section is at the back */
+}
+
+.about-me-content {
+    position: fixed; /* Keeps the content fixed in place */
+    top: 50%; /* Centers vertically */
+    left: 75%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true centering */
+    z-index: 1; /* Higher z-index to ensure it stays above the background */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center content vertically */
+    color: #FCF1D2; /* Text color */
+    text-align: left; /* Center text */
+
+}
+
+
+.about-me-text {
+  font-family: "itc-avant-garde-gothic-pro", sans-serif;
+  font-size: 1.5vw; /* Responsive font size */
+  padding: 10px; /* Adjust padding for better spacing */
+  width: 45vw; /* Set a width */;
+   
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* New Section (comes after About Me) */
+.new-section {
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  background-color:#1F1E19;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  z-index: 3; /* Higher z-index to overlap About Me section */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
+
+.section-title {
+  position: relative;
+  justify-content: center;
+  align-self: center;
+ height:1vh;
+}
+
+
+.new-section-content {
+  max-height: 100vh;
+  color:#FCF1D2;
+  font-size: 1rem;
+  padding: 20px;
+  text-align: center; /* Center text within the content */
+}
+
+
+.containerskills {
+  max-width: 100vw;
+  width: 80vw; /* Set a max width for skill bars */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three columns */
+  gap: 20px; /* Add space between items */
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;    /* Center elements */
+  margin: 20px;          /* Space between each skill */
+}
+
+.bar {
+  width: 100%; /* Make the bar take full width */
+  height: 30px;
+  border: 1px solid rgb(255, 223, 205);
+  border-radius: 20px;
+  margin: 5px 0; /* Space between the label and the bar */
+}
+
+
+
+.inside1,
+.inside2,
+.inside3,
+.inside4,
+.inside5,
+.inside6,
+.inside7,
+.inside8,
+.inside9 {
+  border-radius: 30px;
+  width: 0%; /* Start width at 0% for animation */
+  height: 100%; /* Fill the height of the bar */
+  background: #D85A36;
+  transition: width 2s ease-in-out; /* Transition for animation */
+}
+
+
+.inside1.animate {
+  width: 90%; /* End width */
+}
+
+.inside2.animate {
+  width: 80%; /* End width */
+}
+
+.inside3.animate {
+  width: 70%; /* End width */
+}
+
+.inside4.animate {
+    width: 85%; /* End width */
+}
+
+.inside5.animate {
+    width: 75%; /* End width */
+}
+
+.inside6.animate {
+    width: 65%; /* End width */
+}
+.inside7.animate {
+  width: 85%; /* End width */
+}
+
+.inside8.animate {
+  width: 75%; /* End width */
+}
+
+.inside9.animate {
+  width: 65%; /* End width */
+}
+
+
+
+
+#contact-section {
+  max-width: 100vw;
+  background-color:#FCF1D2;
+  color:#D85A36;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-size: 3vw;
+  min-width: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 2vw;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+a img {
+  transition: transform 0.3s;
+}
+
+a:hover img {
+  transform: scale(1.1); /* Slightly enlarges icon on hover */
+}
+
+.contact-item a {
+  color:#1F1E19;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #FFD700;
+}
+
+.social-media a {
+  color:#1F1E19;
+  margin: 0 15px;
+  font-size: 1vw;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #FFD700;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-info {
+      flex-direction: column;
+  }
+
+  .social-media a {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Responsive Design for iPhone and smaller screens */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 12vw;
+    }
+  
+    h1::before {
+      font-size: 20vw;
+    }
+ 
+    .navbar-links a {
+      font-size: 5vw;
+    }
+
+    .interactive-drawing {
+      font-size: 30vw;
+    }
+  }
+
+
+  /* Responsive Design for iPhone and smaller screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 14vw; /* Adjust font size for smaller screens */
+  }
+
+  .navbar-links a {
+    font-size: 6vw; /* Resize navbar links for smaller screens */
+  }
+
+  .interactive-drawing {
+    width: 80vw; /* Make interactive drawing smaller for smaller screens */
+  }
+
+  .descript {
+    font-size: 4vw; /* Adjust descriptive text size */
+  }
+
+  .letstalk {
+    font-size: 8vw; /* Adjust 'let's talk' text size */
+  }
+
+  .contact-container h2 {
+    font-size: 8vw; /* Resize contact section header */
+  }
+
+  .contact-container p {
+    font-size: 5vw; /* Resize contact section paragraph */
+  }
+
+  .social-media a {
+    font-size: 6vw; /* Resize social media links */
+  }
+
+  .about-me-text {
+    font-size: 4vw; /* Resize about me text */
+  }
+
+  .containerskills {
+    width: 90vw; /* Make skill bars smaller */
+    grid-template-columns: repeat(2, 1fr); /* Reduce columns to fit */
+  }
+}
